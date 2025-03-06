@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 1000px;
+  transition: 1s;
+  scroll-behavior: smooth;
+
+}
+.scroll {
+  position: relative;
+  opacity: 1;
+  transition: 1s;
+}
+
+.rh {
+  opacity: 0 !important;
+}
+.done{
+  animation: x  3s ease-in-out 1;
+  transform: translateY(30px);
+}
+@keyframes x{
+  0% {
+    transform: translateY(80px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(30px);
+  }
+ 
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+.gray{
+background-color:#f8f8f8;
+}
+.white{
+  background-color: #f6f6f6;
+}
+.scroll-nav {
+  @apply fixed top-0 bg-slate-50 shadow-md;
+}
+.btn {
+  @apply text-red-500 font-bold rounded-full hover:text-white hover:bg-red-500  text-center border-red-500 border-solid  transition-all;
+  border-width: 1px;
+}
+
+.btn:hover{
+  box-shadow: 0px 25px 40px -14px rgb(239 68 68);
+}
+.button{
+  @apply text-white bg-red-500 rounded-md font-semibold ;
+}
+.button:hover{
+box-shadow:0px 25px 40px -14px rgb(239 68 68)
+}
+.container {
+  @apply px-10 my-12 mx-auto;
+}
+.hover-nav {
+  @apply mx-5 hover:text-red-500 transition-all cursor-pointer  relative pb-2;
+}
+.hover-nav:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 2px solid rgb(239, 68, 68);
+  width: 130%;
+  animation: hover 0.6s 1;
+  transition: 0.3s;
+}
+@keyframes hover {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 130%;
+  }
+}
+.nav-active{
+  color: rgb(239, 68, 68);
+  bottom: 1px solid rgb(239,68,68);
+}
+.nav-active::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 2px solid rgb(239, 68, 68);
+  animation: hover 0.6s 1;
+  transition: 0.3s;
+  width: 130%;
+}
+
+@keyframes hover {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 130%;
+  }
+}
+.hover-nav-bottom {
+  @apply  hover:text-red-500 transition-all cursor-pointer  relative py-4 flex flex-col items-center justify-center;
+}
+
+.hover-nav-bottom:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 2px solid rgb(239, 68, 68);
+  width: 130%;
+  animation: hover 0.6s 1;
+  transition: 0.3s;
+}
+
+.before-list {
+  @apply flex items-center text-gray-500 text-sm my-2;
+}
+.before-list-hover {
+  @apply hover:scale-125;
+  transition: 0.4s;
+}
+.headbox {
+  @apply text-black text-xl font-bold mb-6;
+}
+.headbox-ul {
+  @apply mb-12;
+}
+.box-pricing {
+  @apply flex flex-col items-center justify-start border-slate-500 rounded-lg py-10 px-4 hover:scale-110;
+  border: 2px solid;
+  transition: 0.3s;
+}
+.soical {
+  @apply text-center bg-white rounded-full p-2 shadow-xl;
+}
+.head-link {
+  @apply text-xl font-semibold my-4;
+}
+.quick-link {
+  @apply text-gray-500 hover:text-red-500 transition-colors;
+}
+.testimonial-p {
+  @apply my-5 text-left text-gray-500;
+}
+.testimonial .box {
+  @apply rounded-md border-gray-200 border-solid hover:border-red-500 p-10  ;
+  border-width: 1px;
+}
+@media (max-width:768px) {
+.testimonial .box {
+}
+}
+.my-swpier{
+}
+.swiper-wrapper {
+  width: 250% !important;
+  margin-bottom: 60px;
+  gap: 15px;
+}
+.swiper-slide {
+margin:0 !important;
+width: 500px !important;
+}
+.swiper-slide img{
+  width: 50px;
+  height: 51px;
+}
+.swiper-button-prev{
+  margin-left: 10px !important;
+}
+.swiper-button-next{
+margin-right: 10px !important;
+}
+.arrow{
+  @apply text-red-500  w-12 h-12 text-center mx-2 p-3 cursor-pointer;
+  border: 1px solid rgb(239, 68, 68);
+  border-radius: 100%;
+}
+.arrow:hover{
+  @apply text-white bg-red-500;
+}
+.content-parent{
+  position: relative;
+}
+.content-child,
+.content-child[data-active="false"]{
+  @apply  grid-cols-3 gap-3 my-4 hidden ;
+}
+
+.content-child[data-active="true"]{
+display: grid;
+}
+.content-child .box img{
+  width: 50px;
+  height: 51px;
+}
+.body{
+  background-color: #ffffff;
+}
+.subscribe .content{
+  BOX-SHADOW: 3px 3px 10px #0000002e;
+}
